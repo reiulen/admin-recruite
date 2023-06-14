@@ -44,9 +44,17 @@ class JobApplicationController extends Controller
             'poscode' => 'required',
             'country' => 'required',
             'email' => 'required|email',
-            'phone' => 'required',
+            'phone' => 'required|numeric',
             'cv' => 'required|mimes:pdf,jpg,jpeg,png|max:5048',
         ]);
+
+        $emailRegex = '/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/';
+        $email = $request->email;
+        if (!preg_match($emailRegex, $email))
+            return response()->json([
+                'status' => false,
+                'message' => 'Email is not valid.'
+            ], 405);
 
         if($validasi->fails())
             return response()->json([
