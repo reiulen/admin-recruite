@@ -31,7 +31,15 @@
                                             <input name="phone" type="number" class="form-control" />
                                         </th>
                                         <th class="text-nowrap" style="min-width: 180px">
-                                            <input name="hear_about_us" class="form-control" />
+                                            <select class="form-control" name="hear_about_us" id="test">
+                                                <span class="caret"></span>
+                                                <option value="" disabled selected>Select</option>
+                                                <option class="non" value="Professional Recommendation">Professional Recommendation</option>
+                                                <option class="non" value="Google">Google</option>
+                                                <option class="non" value="LinkedIn">LinkedIn</option>
+                                                <option class="non" value="Networking">Networking</option>
+                                                <option class="editable" value="Other">Other</option>
+                                            </select>
                                         </th>
                                         <th class="text-nowrap" style="min-width: 180px">
                                             <input name="submitted_at" type="date" class="form-control" />
