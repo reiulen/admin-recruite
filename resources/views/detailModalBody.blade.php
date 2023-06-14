@@ -41,7 +41,7 @@
         <div class="col-lg-6">
             <div style="font-size: 16px; font-weight: 400">Additional Comments</div>
             <div style="font-size: 18px; padding-top: 4px; font-weight: 500">
-                {{ $data->additional_comments ?? '-' }}
+                {{ $data->message ?? '-' }}
             </div>
         </div>
     </div>
