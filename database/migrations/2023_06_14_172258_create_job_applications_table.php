@@ -21,7 +21,7 @@ class CreateJobApplicationsTable extends Migration
             $table->string('poscode');
             $table->string('country');
             $table->string('email');
-            $table->string('extension');
+            $table->string('extension_file');
             $table->string('phone');
             $table->string('document');
             $table->string('hear_about_us')->nullable();
