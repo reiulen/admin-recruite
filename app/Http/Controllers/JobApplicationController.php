@@ -76,7 +76,7 @@ class JobApplicationController extends Controller
                 'phone' => $request->phone,
                 'document' => $file,
                 'hear_about_us' => $request->hear_about_us,
-                'message' => $request->message,
+                'message' => $request->additional_comment,
                 'extension_file' => $request->file('cv')->getClientOriginalExtension(),
             ]);
         }catch(\Exception $e) {
